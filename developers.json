@@ -1,0 +1,12 @@
+---
+layout: profile
+title: developers
+---
+[{% for item in site.profiles %}
+    {
+        "hiveUserName" : "{{item.hiveUserName}}",
+        "welcomeThreadEntryUrl" : "{{item.welcomeThreadEntryUrl}}",
+        "quote" : "{{item.quote}}"
+    }{%  if forloop.last == false %},{% endif %}{% endfor %}
+]
+
